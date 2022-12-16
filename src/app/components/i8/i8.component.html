@@ -1,0 +1,76 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    
+    <mat-divider></mat-divider>
+        
+    <button mat-button class="menu-button">
+      <mat-icon>collections</mat-icon>
+
+      <span  >Modèles</span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-button class="menu-button">
+    <mat-icon>add_shopping_cart</mat-icon>
+      <span (click)="Modele()"  (click)="saveImageWithText()">Acheter</span>
+   
+  </button>
+ 
+<mat-divider></mat-divider>
+  <button mat-button class="menu-button">
+      <mat-icon>format_color_text</mat-icon>
+<!--Textarea to enter some texts.-->
+  <textarea (keyup)='writeText($event)' id='textArea'  placeholder='Enter some value for text' rows='2' cols='20'></textarea>
+
+
+ </button>
+
+ <mat-divider></mat-divider>
+ <button mat-button class="menu-button">
+   <mat-icon>cloud_upload</mat-icon>
+   <input  type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" >
+
+  
+     </button>
+</mat-sidenav>
+
+<mat-sidenav-content>
+ 
+  <div class="content mat-elevation-z4">
+    <p cdkDrag style="color:brown;font-size: small;">  {{name}}</p>
+    <p cdkDrag style="color:brown;font-size: small;">  {{name1}}</p>
+    <img  [src] =" output?.base64 " alt ="" cdkDrag>
+    
+  
+    
+<!-- <img #boxCard id="scream" width="302" height="188"src="../../../assets/images/2.PNG" cdkDrag  > -->
+
+<div class="img-test">
+  
+<input type="file" id="file" (change)="showImage($event)" 
+    style="display: none; visibility: hidden; width: 1px;" />
+
+    <div>
+      <!--The parent container, image and container for text (to place over the image)-->
+      <div class="mainContainer" id='mainContainer'>
+  
+          <!--The default image. You can select a different image too.-->
+          <img src="../../../assets/images/8.PNG" 
+              id="myimage" alt="" />
+          
+          <!--The text, which is also draggable.-->
+          <div id='theText' (mousedown)='mouseText($event)'>sample text</div>
+         
+      </div>
+  
+      <!--Button to save the image with the text.-->
+      
+  </div>
+</div>
+</div>
+
+</mat-sidenav-content>
+</mat-sidenav-container>
+<mat-sidenav class="mat-elevation-z8">
+
+
+</mat-sidenav>

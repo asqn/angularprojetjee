@@ -1,0 +1,34 @@
+.profile-image {
+  position: relative;
+  width: 120px;
+  margin: auto;
+}
+
+.profile-image > img {
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-image > button {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  text-align: center;
+ 
+}
+
+.form-container {
+  margin-left: 30%;
+  width: 400px;
+  height: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
